@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Edit task</h1>
+   <%= render 'form', task: @task %>
+   <div class="completed d-flex align-items-center">
+   <i class="far fa-square"></i><p>Completed</p>
+   </div>
+   <hr>
+   <%= link_to "Back to a task list", tasks_path %>
+</div>

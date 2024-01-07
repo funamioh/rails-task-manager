@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between">
+<h1><%= @task.title %></h1>
+<button><%= link_to "Edit this task", edit_task_path %></button>
+</div>
+
+<div class="detail-container">
+  <%= @task.details %>
+</div>
+<p>This task is not completed yet</p>
+<hr>
+
+<%= link_to "Back to list", tasks_path %>
