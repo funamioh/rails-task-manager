@@ -4,7 +4,9 @@
   <div class="task-container">
   <%# <input type="checkbox" id="scales" name="scales" checked /> %>
   <%= raw task.completed == true ? "<i class=\"fas fa-check-square\"></i>" : "<i class=\"far fa-square\"></i>" %>
-  <label><%= link_to task.title, task_path(task) %></label><i class="fas fa-trash-alt"></i>
+  <label><%= link_to task.title, task_path(task.id) %>
+  <%= link_to raw("<i class=\"fas fa-trash-alt\"></i>"),
+  task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   </div>
   <% end %>
   <hr>

@@ -1,8 +1,11 @@
 <div class="container">
   <h1>Edit task</h1>
    <%= render 'form', task: @task %>
-   <div class="completed d-flex align-items-center">
-   <i class="far fa-square"></i><p>Completed</p>
+   <div class="completed d-flex align-items-center" id="completed-section">
+
+
+   <%= raw @task.completed == true ? "<i class=\"fas fa-check-square\"></i><p>Completed</p>" : "<i class=\"far fa-square\"></i><p>Completed</p>" %>
+   <%# <i class="far fa-square"></i> %>
    </div>
    <hr>
    <%= link_to "Back to a task list", tasks_path %>
